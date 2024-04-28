@@ -13,10 +13,10 @@ public enum Productos {
         this.nombre = nombre;
         this.precio = precio;
     }
-    public int getPrecio() {
-        return precio;
-    }
     public String getNombre() {
         return nombre;
+    }
+    public int getPrecio() {
+        return precio;
     }
 }
