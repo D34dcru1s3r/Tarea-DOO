@@ -16,4 +16,7 @@ public enum Productos {
     public int getPrecio() {
         return precio;
     }
+    public String getNombre() {
+        return nombre;
+    }
 }
