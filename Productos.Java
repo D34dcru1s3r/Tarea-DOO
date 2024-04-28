@@ -2,11 +2,11 @@
  * @author Gustavo González
  * @version versión 2, 28 de abril 2024*/
 public enum Productos {
-    COCACOLA("cocacola", 1500),
-    SPRITE("sprite", 1200),
-    FANTA("fanta", 1000),
-    SNICKERS("snickers", 800),
-    SUPER8("super8", 500);
+    COCACOLA("CocaCola", 1500),
+    SPRITE("Sprite", 1200),
+    FANTA("Fanta", 1000),
+    SNICKERS("Snickers", 800),
+    SUPER8("Super8", 500);
     private final String nombre;
     private final int precio;
     Productos(String nombre, int precio) {
