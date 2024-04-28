@@ -1,20 +1,17 @@
 /*Clase Moneda
- * @author Gustavo Benítez
- * @version versión 1, 25 de abril 2024*/
-class Moneda implements Comparable <Moneda> {
-    private int valor;
-    public Moneda(int valor) {
-        this.valor = valor;
+ * @author Gustavo González
+ * @version versión 2, 28 de abril 2024*/
+abstract class Moneda implements Comparable <Moneda> {
+    /*Las monedas no tienen propiedades, el valor es retornando directamente el número*/
+    public Moneda() {
     }
-    public int getValor() {
-        return valor;
-    }
+    public abstract int getValor();
     @Override
     public int compareTo(Moneda otraMoneda) {
-        return Integer.compare(this.valor, otraMoneda.valor);
+        return Integer.compare(this.getValor(), otraMoneda.getValor());
     }
     @Override
     public String toString() {
-        return "Moneda de " + valor;
+        return "Moneda de " + this.getValor();
     }
 }
