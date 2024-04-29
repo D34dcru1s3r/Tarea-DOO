@@ -1,6 +1,6 @@
 /*El expendedor, encargado de crear los depositos hacer la compra y dar el vuelto (con los distintos casos incluidos)
  * @author Gustavo González
- * @version 5, 29 de abril 2024*/
+ * @version 6, 29 de abril 2024*/
 class Expendedor {
     /*Se crean los depositos de los objetos*/
     private Deposito <CocaCola> coca;
@@ -45,7 +45,7 @@ class Expendedor {
     /*La función comprarProducto recibe una Moneda m y un int cual, si la moneda es nula arroja PagoIncorrectoException, si no crea variables para almacenar el precio, vuelto y el producto solicitado.
     Se entra en un switch cuya función es la misma en los distintos casos, pero con los distintos productos disponibles, si se ingresa un número no valido arroja NoHayProductoException.
     Para cada caso saca el precio desde la enum Productos, luego saca el producto correspondiente, si el producto es null guarda la moneda en el depósito de vuelto y arroja NoHayProductoException.
-    Luego si la moneda no es null, compara su valor con el precio, si es igual devuelve el producto, si el valor de la moneda es mayor, calcula y deposita el vuelto en el depósito de vuelto y devuelve el producto y finalmente si el valor de la moneda es menor que el precio guarda la moneda en el depósito de vuelto, devuelve producto null y arroja NoHayProductoException.*/
+    Luego si la moneda no es null, compara su valor con el precio, si es igual devuelve el producto, si el valor de la moneda es mayor, calcula y deposita el vuelto en el depósito de vuelto y devuelve el producto y finalmente si el valor de la moneda es menor que el precio guarda la moneda en el depósito de vuelto, devuelve producto null y arroja PagoInsuficienteException.*/
     public Producto comprarProducto(Moneda m, int cual) throws PagoIncorrectoException, NoHayProductoException, PagoInsuficienteException {
         if (m == null) {
             throw new PagoIncorrectoException("La moneda es nula");
